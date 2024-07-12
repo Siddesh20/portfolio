@@ -1,92 +1,104 @@
-.container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
+/* NavBar section */
+.nav{
+  font-family:Arial, Helvetica, sans-serif;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1.25rem 5rem;
+  margin: 1rem 11.5625rem;
+  list-style-type: none; /* Removes the bullet points */
 }
 
-.title a {
-  color: #0070f3;
+.nav_a {
   text-decoration: none;
+  color: black;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.nav_a:hover {
+  font-weight: bolder; /* Mouse over link */
+  /* text-decoration: underline; Adds underline on hover */
 }
 
-.title {
-  margin: 0 0 1rem;
-  line-height: 1.15;
-  font-size: 3.6rem;
-}
 
-.title {
-  text-align: center;
-}
-
-.title,
-.description {
-  text-align: center;
-}
-
-.description {
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.grid {
+/* Intro Section */
+.introDiv {
+  font-family:Arial, Helvetica, sans-serif; /*'Segoe UI', Tahoma, Geneva, Verdana, sans-serif*/
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-
-  max-width: 800px;
-  margin-top: 3rem;
+  padding: 1.25rem 5rem;
 }
 
-.card {
-  margin: 1rem;
-  flex-basis: 45%;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition:
-    color 0.15s ease,
-    border-color 0.15s ease;
+.introHeader {
+  margin-right: auto;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.introHeaderTitle {
+  width: 23.4rem;
+  font-size: 1.5625rem;
+  color: #615b57;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /*The typwriter cursor*/
+  white-space: nowrap; 
+  animation: 
+  typing 3s steps(40, end),
+  blink-caret .75s step-end infinite;
 }
 
-.card h3 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 50% }
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
 }
 
-.logo {
-  height: 1em;
+.introHeaderSubTitle {
+  margin-top: 0px;
+  margin-right: 0.5rem;
+  font-size: 3.75rem;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /*The typwriter cursor*/
+  white-space: nowrap; 
+  opacity: 0; 
+  animation: 
+  fadeIn 1s forwards, /* Fade in animation */
+  typing2 4s steps(40, end),
+  blink-caret .75s step-end infinite;
+  animation-delay: 3s;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes typing2 {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+.introImg {
+  width: 36rem;
+  border-radius: 50%;
+}
+
+/* Line */
+.line {
+  width: 100%;         
+  height: 0.00625rem;         
+  background-color: #615b57;    
+}
+
+.padding {
+  padding: 1.25rem 5rem;  
 }
