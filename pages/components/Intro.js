@@ -2,17 +2,17 @@ import React from "react"
 import styles from '../../styles/Home.module.css';
 
 export default function Intro() {
+    const IntroHeaderTitle = "Hey, I'm Siddesh Bharat Hazare"
+    const IntroHeaderSubTitle = "I enjoy trying new things :)"
+    const Image = "/images/20240405_173541.jpg"
+    
     return (
-        <div className={styles.introDiv}>
+        <div id="intro" className={styles.introDiv}>
             <div className={styles.introHeader}>
-                <h3 className={styles.introHeaderTitle}>Hey, I'm Siddesh Bharat Hazare</h3>
-                <h1 className={styles.introHeaderSubTitle}>I enjoy trying new things :)</h1>
-                {/* <div className={styles.introHeaderSubTitle}>
-                    <p>Coding enthusiast</p>
-                    <p>Enjoy trying new things :)</p>
-                </div> */}
+                <h3 className={styles.introHeaderTitle}>{IntroHeaderTitle}</h3>
+                <h1 className={styles.introHeaderSubTitle}>{IntroHeaderSubTitle}</h1>
             </div>
-            <img src="/images/20240405_173541.jpg" className={styles.introImg}/>
+            <img src={Image} className={styles.introImg}/>
         </div>
     )
 }
