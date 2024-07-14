@@ -3,6 +3,7 @@ import NavBar from "./components/NavBar"
 import Intro from "./components/Intro"
 import Line from "./components/Line"
 import Card from "./components/Card"
+import Form from "./components/Form"
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
@@ -167,6 +168,7 @@ export default function Home() {
         <Card data={PORData} cardSize="Medium"/>
       </div>
       <Line />
+      <Form />
     </div>
   );
 }

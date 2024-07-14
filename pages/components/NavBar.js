@@ -29,7 +29,7 @@ export default function NavBar() {
     ]
     
     return (
-        <nav>
+        <nav className={styles.navBar}>
             <ul className={styles.nav}>
                 {
                     NavbarItems.map(({section, href},index) => 

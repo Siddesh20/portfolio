@@ -8,7 +8,7 @@ export default function Card(props) {
     const Style = {
         Large: {
             width: '60rem',
-            height: '40rem'
+            height: '34rem'
         },
         Medium: {
             width: '40rem',
@@ -21,7 +21,7 @@ export default function Card(props) {
     };
     const MaxWidth = {
         Large: {
-            maxWidth: '20rem'
+            maxWidth: '24rem'
         },
         Medium: {
             maxWidth: '16rem'

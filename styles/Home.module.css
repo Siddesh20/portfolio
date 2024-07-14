@@ -1,9 +1,21 @@
 .main {
   padding: 0rem 5rem;
-  font-family:Arial, Helvetica, sans-serif; /*'Segoe UI', Tahoma, Geneva, Verdana, sans-serif*/
+  padding-top: 4rem;
+  font-family:Arial, Helvetica, sans-serif; 
 }
 
 /* NavBar section */
+.navBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4rem;
+  background-color: white; 
+  box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1); 
+  z-index: 1000; 
+}
+
 .nav{
   display: flex;
   flex-direction: row;
@@ -11,7 +23,7 @@
   align-items: center;
   padding-left: 0rem;
   margin: 2rem 11.5625rem;
-  list-style-type: none; /* Removes the bullet points */
+  list-style-type: none; 
 }
 
 .nav_a {
@@ -20,8 +32,7 @@
 }
 
 .nav_a:hover {
-  font-weight: bolder; /* Mouse over link */
-  /* text-decoration: underline; Adds underline on hover */
+  font-weight: bolder; 
 }
 
 
@@ -64,8 +75,8 @@
   margin-top: 0rem;
   margin-right: 0.5rem;
   font-size: 3.75rem;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /*The typwriter cursor*/
+  overflow: hidden; 
+  border-right: .15em solid orange; 
   white-space: nowrap; 
   opacity: 0; 
   animation: 
@@ -150,11 +161,10 @@
 
 .card span {
   padding: .5rem;
-  text-align: left; /*Take care*/
+  text-align: left; 
   transform: rotate(-90deg);
   transition: all 1s;
   color: #615b57;
-  /* letter-spacing: .1em; */
 }
 
 .card:hover span {
@@ -169,4 +179,138 @@
 .card p {
   display: None;
   font-weight: lighter;
+}
+
+/* Form */
+.form {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  gap: 0.3rem;
+  padding: 2rem;
+  border-radius: 0.8rem;
+  word-spacing: .2em;
+  font-size:large;
+  margin-left: 25%;
+}
+
+.formTop {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.formTitle {
+  margin: 0%;
+  font-weight: lighter;
+}
+
+.formDots {
+  display: flex;
+  gap: 0.5rem;
+  margin-right: auto;
+}
+
+.formRedDot {
+  background-color: #EF4444;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 625rem;
+}
+
+.formYellowDot {
+  background-color: #EAB308;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 625rem;
+}
+
+.formGreenDot {
+  background-color: #22C55E;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 625rem;
+}
+
+.form label {
+  color: #4ADE80;
+}
+
+.form input {
+  color: white;
+  background-color: black;
+  border: none;
+  word-spacing: .2em;
+  font-size: large;
+}
+
+.form textarea {
+  color: white;
+  background-color: black;
+  border: none;
+  word-spacing: .1em;
+  font-size: x-large;
+  min-height: 5rem; 
+  resize: vertical; 
+  overflow: hidden; 
+}
+
+.form button {
+  font-family: inherit;
+  font-size: large;
+  background: royalblue;
+  color: white;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+  width: 7rem;
+  margin-left: 40%;
+}
+
+.form button span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+.form button img {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+  width: 2rem;
+}
+
+.form button:hover .img-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.form button:hover img {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+.form button:hover span {
+  transform: translateX(5em);
+}
+
+.form button:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
 }
