@@ -86,7 +86,6 @@
   animation-delay: 3s;
 }
 
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -181,6 +180,181 @@
   font-weight: lighter;
 }
 
+/* MultiCard */
+.background {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  /* background-image: linear-gradient(43deg, #43cea2 0%, #185a9d 100%); */
+  /* background-image: linear-gradient(43deg, #f12711 0%, #f5af19 100%); */
+  /* background-image: linear-gradient(43deg, #ff9966 0%, #ff5e62 100%); */
+  /* background-image: linear-gradient(43deg, #00c6ff 0%, #0072ff 100%); */
+}
+
+.multicardChild {
+  position: relative;
+  width: 18.75rem;
+  height: 18.75rem;
+  background: lightgrey;
+  border-radius: .5rem;
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0rem 0.4375rem 1.8125rem 0rem;
+  transition: all 1s ease-in-out;
+  border: 0.125rem solid rgb(255, 255, 255);
+}
+
+.multicardChild img {
+  width: 3.125rem;
+}
+
+.muticardHeading {
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
+  transform: translate(50%, 50%);
+  transition: all 0.6s ease-in-out;
+  font-size: 1.3em;
+  font-weight: bolder;
+  color: #ffffff;
+  letter-spacing: 0.1875rem;
+}
+
+.multiCardIcon {
+  display: inline-block;
+  max-width: 1.25rem;
+  max-height: 1.25rem;
+}
+
+.multicardChildElements {
+  fill: rgba(255, 255, 255, 0.797);
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+.multiCardBox {
+  position: absolute;
+  padding: 0.625rem;
+  text-align: right;
+  background: rgba(255, 255, 255, 0.389);
+  border-top: 0.125rem solid rgb(255, 255, 255);
+  border-right: 0.0625rem solid white;
+  border-radius: 10% 13% 42% 0%/10% 12% 75% 0%;
+  box-shadow: rgba(100, 100, 111, 0.364) -0.4375rem 0.4375rem 1.8125rem 0rem;
+  transform-origin: bottom left;
+  transition: all 1s ease-in-out;
+}
+
+.multiCardBox::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.multiCardBox:hover .multicardChildElements {
+  fill: white;
+}
+
+.multiCardBoxData {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: auto;
+}
+
+.multiCardBoxName {
+  font-size: 0.55rem;
+  color: whitesmoke;
+}
+
+.box1 {
+  width: 65%;
+  height: 65%;
+  bottom: -65%;
+  left: -65%;
+}
+
+.box1:hover::before {
+  opacity: 1;
+}
+
+.box1:hover .multicardChildElements .multiCardIcon {
+  filter: drop-shadow(0 0 0.3125rem white);
+}
+
+.box2 {
+  width: 50%;
+  height: 50%;
+  bottom: -50%;
+  left: -50%;
+  transition-delay: 0.2s;
+}
+
+.box2:hover::before {
+  opacity: 1;
+}
+
+.box2:hover .multicardChildElements .multiCardIcon {
+  filter: drop-shadow(0 0 0.3125rem white);
+}
+
+.box3 {
+  width: 37%;
+  height: 37%;
+  bottom: -37%;
+  left: -37%;
+  transition-delay: 0.4s;
+}
+
+.box3:hover::before {
+  opacity: 1;
+}
+
+.box3:hover .multicardChildElements .multiCardIcon {
+  filter: drop-shadow(0 0 0.3125rem white);
+}
+
+.box4 {
+  width: 25%;
+  height: 25%;
+  bottom: -25%;
+  left: -25%;
+  transition-delay: 0.6s;
+}
+
+.box4:hover::before {
+  opacity: 1;
+}
+
+.box4:hover .multicardChildElements .multiCardIcon {
+  filter: drop-shadow(0 0 0.3125rem white);
+}
+
+.box5 {
+  width: 13%;
+  height: 13%;
+  bottom: -13%;
+  left: -13%;
+  transition-delay: 0.8s;
+}
+
+.multicardChild:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.multicardChild:hover .multiCardBox {
+  bottom: -0.0625rem;
+  left: -0.0625rem;
+}
+
+.multicardChild:hover .muticardHeading {
+  transform: translate(4.375rem, -3.25rem);
+  letter-spacing: 0rem;
+}
+
 /* Form */
 .form {
   background-color: black;
@@ -251,11 +425,10 @@
   color: white;
   background-color: black;
   border: none;
-  word-spacing: .1em;
+  word-spacing: .025em;
   font-size: x-large;
-  min-height: 5rem; 
+  min-height: 10rem; 
   resize: vertical; 
-  overflow: hidden; 
 }
 
 .form button {
@@ -313,4 +486,42 @@
   to {
     transform: translateY(-0.1em);
   }
+}
+
+
+/* Socials */
+.socials {
+  width: 50%;
+  margin-left: 22%;
+}
+
+.socialsImg {
+  max-width: 3rem;
+  max-height: 3rem;
+}
+
+.social {
+  position: relative;
+  display: inline-block;
+}
+
+.socialsName {
+  visibility: hidden;
+  width: auto;
+  border: 0.1rem solid black;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 65%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.socialsImg:hover + .socialsName {
+  opacity: 1;
+  visibility: visible;
 }

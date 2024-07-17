@@ -1,9 +1,9 @@
 # **Portfolio**
 
-This website details all the information about me.
+This website details all the information about me. It was built using next-js.
 
 - [Tools Used](#tools)
-- [Languages Used](#languages)
+- [Languages and Framework Used](#languages)
 
 ## **Tools**
 
@@ -11,7 +11,7 @@ This website details all the information about me.
 - **Contrast Checker**: https://colourcontrast.cc
 - **CSS Element ideas**: https://uiverse.io
 
-## **Languages and Framework**
+## **Languages**
 
 1. **Javascript**: For frontend components.
 2. **CSS**: For styling the page.

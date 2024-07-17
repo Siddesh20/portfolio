@@ -1,12 +1,40 @@
 import React from "react"
-import NavBar from "./components/NavBar"
+import LinkBar from "./components/LinkBar"
 import Intro from "./components/Intro"
 import Line from "./components/Line"
 import Card from "./components/Card"
+import MultiCard from "./components/MultiCard"
 import Form from "./components/Form"
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
+  const NavbarItems = [
+    {
+        section: "😄About me", 
+        href: "#intro"
+    },
+    {
+        section: "🎓Education",
+        href: "#education"
+    },
+    {
+        section: "💼Work Experience",
+        href: "#work"
+    },
+    {
+        section: "🛠️Skills",
+        href: "#skills"
+    },
+    {
+        section: "📂Projects",
+        href: "#projects"
+    },
+    {
+        section: "🌟PORs",
+        href: "#por"
+    }
+  ]
+
   const Education = "🎓Education"
   const EducationData = [
     {
@@ -64,6 +92,76 @@ export default function Home() {
         "Added pre & post-processing functions and performed prompt iterations to improve accuracy."
       ],
       image: "/images/trumio.png"
+    }
+  ]
+
+  const Skills = "🛠️Skills"
+  const SkillsData = [
+    {
+      heading: "Languages",
+      points: [
+        {
+          skill: "JavaScript/TypeScript",
+          img: "/images/js.png"
+        },
+        {
+          skill: "Python",
+          img: "/images/py.png"
+        },
+        {
+          skill: "CSS",
+          img: "/images/css.png"
+        },
+        {
+          skill: "HTML",
+          img: "/images/html.png"
+        },
+        {
+          skill: "C/C++",
+          img: "/images/c.png"
+        }
+      ],
+      size: "Large"
+    },
+    {
+      heading: "Libraries",
+      points: [
+        {
+          skill: "React",
+          img: "/images/react.png"
+        },
+        {
+          skill: "Flask",
+          img: "/images/flask.png"
+        },
+        {
+          skill: "Tensorflow",
+          img: "/images/tf.png"
+        },
+        {
+          skill: "Pandas",
+          img: "/images/pandas.png"
+        },
+        {
+          skill: "Numpy",
+          img: "/images/numpy.png"
+        }
+      ],
+      size: "Large"
+    },
+    {
+      heading: "Utilities",
+      points: [
+        {
+          skill: "Git/Github",
+          img: "/images/git.png"
+        },
+        {
+          skill: "LATEX",
+          img: "/images/latex.png"
+        }
+      ],
+      size: "Small"
     }
   ]
 
@@ -143,9 +241,27 @@ export default function Home() {
     },
   ]
 
+  const SocialLinks = [
+    {
+      section: "Instagram",
+      href: "https://www.instagram.com/siddesh201hazare/",
+      img: "/images/insta.png"
+    },
+    {
+      section: "GitHub",
+      href: "https://github.com/Siddesh20/",
+      img: "/images/git.png"
+    },
+    {
+      section: "LinkedIn",
+      href: "https://www.linkedin.com/in/siddesh-bharat-hazare-595291143",
+      img: "/images/linkedIn.png"
+    }
+  ]
+  
   return (
     <div className={styles.main}>
-      <NavBar />
+      <LinkBar data={NavbarItems} style={"navBar"}/>
       <Intro />
       <Line />
       <div id="education" className={styles.cardContainer} > 
@@ -158,6 +274,11 @@ export default function Home() {
         <Card data={WorkExperienceData} cardSize="Large"/>
       </div>
       <Line />
+      <div id="skills" className={styles.cardContainer}>
+        <h1 className={styles.cardContainerHeader}>{Skills}</h1>
+        <MultiCard data={SkillsData} />
+      </div> 
+      <Line />
       <div id="projects" className={styles.cardContainer}>
         <h1 className={styles.cardContainerHeader}>{Projects}</h1>
         <Card data={ProjectsData} cardSize="Large"/>
@@ -169,6 +290,7 @@ export default function Home() {
       </div>
       <Line />
       <Form />
+      <LinkBar data={SocialLinks} style={"socials"}/>
     </div>
   );
 }
