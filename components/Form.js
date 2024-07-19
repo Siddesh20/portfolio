@@ -1,6 +1,8 @@
 import React from "react"
 import { Roboto } from 'next/font/google'
-import styles from '../../styles/Home.module.css';
+import styles from "../styles/Home.module.css"
+import { initializeApp } from 'firebase/app'
+import {  addDoc, getFirestore, collection } from 'firebase/firestore'
 
 const roboto = Roboto({
     weight: ['400', '700'],
@@ -9,7 +11,20 @@ const roboto = Roboto({
     display: 'swap',
 })
 
+const firebaseApp = initializeApp({
+    apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+    authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+})
+
 export default function Form(){
+
+    const firestore = getFirestore()
+    const dataCollection = collection(firestore, 'formData')
+
     const id = React.useId()
 
     const [formData, setFormData] = React.useState({
@@ -30,9 +45,9 @@ export default function Form(){
         )
     }
 
-    function handleFormSubmit(event) {
+    const handleFormSubmit = async (event) => {
         event.preventDefault()
-        console.log(formData)
+        const newDoc = await addDoc(dataCollection, formData)
     }
 
     return (

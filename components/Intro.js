@@ -1,5 +1,5 @@
 import React from "react"
-import styles from '../../styles/Home.module.css';
+import styles from "../styles/Home.module.css"
 
 export default function Intro() {
     const IntroHeaderTitle = "Hey, I'm Siddesh Bharat Hazare"

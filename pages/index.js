@@ -1,10 +1,10 @@
 import React from "react"
-import LinkBar from "./components/LinkBar"
-import Intro from "./components/Intro"
-import Line from "./components/Line"
-import Card from "./components/Card"
-import MultiCard from "./components/MultiCard"
-import Form from "./components/Form"
+import LinkBar from "../components/LinkBar"
+import Intro from "../components/Intro"
+import Line from "../components/Line"
+import Card from "../components/Card"
+import MultiCard from "../components/MultiCard"
+import Form from "../components/Form"
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
@@ -266,12 +266,12 @@ export default function Home() {
       <Line />
       <div id="education" className={styles.cardContainer} > 
         <h1 className={styles.cardContainerHeader}>{Education}</h1>
-        <Card data={EducationData} cardSize="Small"/>
+        <Card data={EducationData} cardSize="Small" largeBackground={false}/>
       </div>
       <Line />
       <div id="work" className={styles.cardContainer}>
         <h1 className={styles.cardContainerHeader}>{WorkExperience}</h1>
-        <Card data={WorkExperienceData} cardSize="Large"/>
+        <Card data={WorkExperienceData} cardSize="Large" largeBackground={false}/>
       </div>
       <Line />
       <div id="skills" className={styles.cardContainer}>
@@ -281,12 +281,12 @@ export default function Home() {
       <Line />
       <div id="projects" className={styles.cardContainer}>
         <h1 className={styles.cardContainerHeader}>{Projects}</h1>
-        <Card data={ProjectsData} cardSize="Large"/>
+        <Card data={ProjectsData} cardSize="Large" largeBackground={true}/>
       </div>
       <Line />
       <div id="por" className={styles.cardContainer} > 
         <h1 className={styles.cardContainerHeader}>{POR}</h1>
-        <Card data={PORData} cardSize="Medium"/>
+        <Card data={PORData} cardSize="Medium" largeBackground={true}/>
       </div>
       <Line />
       <Form />
