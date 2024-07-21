@@ -5,28 +5,14 @@ export default function Card(props) {
     const [hoveredIndex, setHoveredIndex] = React.useState(null)
     
     const { data: Data, cardSize: CardSize } = props
-    const Style = {
-        Large: {
-            width: '60rem',
-            height: '34rem'
-        },
-        Medium: {
-            width: '40rem',
-            height: '30rem'
-        },
-        Small: {
-            width: '34rem',
-            height: '20rem'
-        }
-    };
     const MaxWidth = {
-        Large: {
+        cardLarge: {
             maxWidth: '24rem'
         },
-        Medium: {
+        cardMedium: {
             maxWidth: '16rem'
         },
-        Small: {
+        cardSmall: {
             maxWidth: '16rem'
         }
     }
@@ -57,7 +43,7 @@ export default function Card(props) {
     )
 
     return (
-        <div style={Style[CardSize]} className={styles.cards}>
+        <div className={`${styles.cards} ${styles[CardSize]}`}>
             {Cards}
         </div>
     )

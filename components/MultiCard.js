@@ -22,7 +22,7 @@ export default function MultiCard(props) {
     
     const { data: Data } = props
 
-    const MultiCards = Data.map(({heading, points, size}, index) =>
+    const MultiCards = Data.map(({heading, points}, index) =>
         <div
             key={index}
             className={styles}
@@ -52,7 +52,7 @@ export default function MultiCard(props) {
         </div>
     )
     return (
-        <div className={styles.cards}>
+        <div className={styles.multicards}>
             {MultiCards}
         </div>
     )

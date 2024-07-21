@@ -10,7 +10,7 @@ import styles from '../styles/Home.module.css';
 export default function Home() {
   const NavbarItems = [
     {
-        section: "😄About me", 
+        section: "😄About Me", 
         href: "#intro"
     },
     {
@@ -120,8 +120,7 @@ export default function Home() {
           skill: "C/C++",
           img: "/images/c.png"
         }
-      ],
-      size: "Large"
+      ]
     },
     {
       heading: "Libraries",
@@ -146,8 +145,7 @@ export default function Home() {
           skill: "Numpy",
           img: "/images/numpy.png"
         }
-      ],
-      size: "Large"
+      ]
     },
     {
       heading: "Utilities",
@@ -160,8 +158,7 @@ export default function Home() {
           skill: "LATEX",
           img: "/images/latex.png"
         }
-      ],
-      size: "Small"
+      ]
     }
   ]
 
@@ -243,11 +240,6 @@ export default function Home() {
 
   const SocialLinks = [
     {
-      section: "Instagram",
-      href: "https://www.instagram.com/siddesh201hazare/",
-      img: "/images/insta.png"
-    },
-    {
       section: "GitHub",
       href: "https://github.com/Siddesh20/",
       img: "/images/git.png"
@@ -266,12 +258,12 @@ export default function Home() {
       <Line />
       <div id="education" className={styles.cardContainer} > 
         <h1 className={styles.cardContainerHeader}>{Education}</h1>
-        <Card data={EducationData} cardSize="Small" largeBackground={false}/>
+        <Card data={EducationData} cardSize="cardSmall" largeBackground={false}/>
       </div>
       <Line />
       <div id="work" className={styles.cardContainer}>
         <h1 className={styles.cardContainerHeader}>{WorkExperience}</h1>
-        <Card data={WorkExperienceData} cardSize="Large" largeBackground={false}/>
+        <Card data={WorkExperienceData} cardSize="cardLarge" largeBackground={false}/>
       </div>
       <Line />
       <div id="skills" className={styles.cardContainer}>
@@ -281,12 +273,12 @@ export default function Home() {
       <Line />
       <div id="projects" className={styles.cardContainer}>
         <h1 className={styles.cardContainerHeader}>{Projects}</h1>
-        <Card data={ProjectsData} cardSize="Large" largeBackground={true}/>
+        <Card data={ProjectsData} cardSize="cardLarge" largeBackground={true}/>
       </div>
       <Line />
       <div id="por" className={styles.cardContainer} > 
         <h1 className={styles.cardContainerHeader}>{POR}</h1>
-        <Card data={PORData} cardSize="Medium" largeBackground={true}/>
+        <Card data={PORData} cardSize="cardMedium" largeBackground={true}/>
       </div>
       <Line />
       <Form />

@@ -1,6 +1,6 @@
 .main {
   padding: 0rem 5rem;
-  padding-top: 4rem;
+  padding-top: 5rem;
   font-family:Arial, Helvetica, sans-serif; 
 }
 
@@ -48,7 +48,7 @@
 }
 
 .introHeaderTitle {
-  width: 23.4rem;
+  width: fit-content;
   font-size: 1.5625rem;
   color: #615b57;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -72,6 +72,7 @@
 }
 
 .introHeaderSubTitle {
+  width: fit-content;
   margin-top: 0rem;
   margin-right: 0.5rem;
   font-size: 3.75rem;
@@ -180,7 +181,31 @@
   font-weight: lighter;
 }
 
+.cardLarge {
+  width: 60rem;
+  height: 34rem;
+}
+
+.cardMedium {
+  width: 40rem;
+  height: 30rem;
+}
+
+.cardSmall {
+  width: 34rem;
+  height: 20rem;
+}
+
 /* MultiCard */
+.multicards {
+  background: #E5E4E2;
+  display: flex;
+  gap: 0.3125rem;
+  padding: .4em;
+  font-size: large;
+  border-radius: 0.6rem;
+}
+
 .background {
   position: absolute;
   inset: 0;
@@ -313,7 +338,7 @@
 }
 
 .box4 {
-  width: 25%;
+  width: 30%;
   height: 25%;
   bottom: -25%;
   left: -25%;
@@ -329,7 +354,7 @@
 }
 
 .box5 {
-  width: 13%;
+  width: 24%;
   height: 13%;
   bottom: -13%;
   left: -13%;
@@ -506,8 +531,8 @@
   width: auto;
   border: 0.1rem solid black;
   text-align: center;
-  border-radius: 6px;
-  padding: 5px;
+  border-radius: 0.375rem;
+  padding: 0.3125rem;
   position: absolute;
   z-index: 1;
   bottom: 65%;
@@ -520,4 +545,176 @@
 .socialsImg:hover + .socialsName {
   opacity: 1;
   visibility: visible;
+}
+
+@media (max-width: 575.98px) {
+  .main {
+    padding: 0rem 0.5rem;
+    padding-top: 3rem;
+  }
+  /* Navbar */
+  .navBar {
+    font-size:x-small;
+    height: 2rem;
+  }
+  
+  .nav{
+    padding: 0.8rem 0.5rem;
+    margin: 0rem 0rem;
+  }
+  
+  .nav ul {
+    padding-inline-start: none;
+  } 
+
+  /* Intro Section */
+  .introDiv {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .introHeader {
+    width: 100%;
+  }
+
+  .introHeaderTitle {
+    font-size: medium;
+  }
+
+  .introHeaderSubTitle {
+    font-size: larger;
+  }
+
+  .introImg {
+    width: 14rem;
+  }
+
+  /* Card */
+  .cardContainer {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cardContainerHeader {
+    font-size: x-large;
+    margin-right: 0rem;
+    margin-left: 0rem;
+    margin-top: 0rem;
+  }
+
+  .cards {
+    font-size: small;
+    max-width: 100%;
+  }
+
+  .cardSmall {
+    height: 13rem; 
+  }
+
+  .cardMedium {
+    height: 22rem; 
+  }
+
+  /* MultiCard */
+  .multicards  {
+    flex-direction: column;
+  }
+
+  .multicardChild:hover {
+    transform: scale(1.05);
+  }
+
+  /* Form */
+  .form {
+    width: 100%;
+    margin-left: 0%;
+  }
+
+  /* Socials */
+  .socials {
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width: 575.98px) and (max-width: 1280px) {
+  .main {
+    padding: 0rem 0.5rem;
+    padding-top: 4rem;
+  }
+  /* Navbar */
+  .navBar {
+    font-size: medium;
+    height: 3rem;
+  }
+  
+  .nav{
+    padding: 0.8rem 0.5rem;
+    margin: 0rem 0rem;
+  }
+  
+  .nav ul {
+    padding-inline-start: none;
+  } 
+
+  /* Intro Section */
+
+  .introHeader {
+    margin-right: 0%;
+    margin-left: auto;
+  }
+
+  .introHeaderTitle {
+    font-size: large;
+  }
+
+  .introHeaderSubTitle {
+    font-size: xx-large;
+  }
+
+  .introImg {
+    width: 14rem;
+    margin-right: auto;
+  }
+
+  /* Card */
+  .cardContainer {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cardContainerHeader {
+    font-size: x-large;
+    margin-right: 0rem;
+    margin-left: 0rem;
+    margin-top: 0rem;
+  }
+
+  .cards {
+    font-size: medium;
+    max-width: 100%;
+  }
+
+  .cardSmall {
+    height: 14rem; 
+  }
+
+  .cardMedium {
+    height: 24rem; 
+  }
+
+  /* MultiCard */
+  .multicards  {
+    flex-direction: column;
+  }
+
+  /* Form */
+  .form {
+    width: 70%;
+    margin: auto;
+  }
+
+  /* Socials */
+  .socials {
+    margin-top: 2rem;
+  }
 }

@@ -36,7 +36,6 @@ export default function Form(){
 
     function onFormDataChange(event) {
         const { name, value } = event.target
-        console.log(value)
         setFormData(
             prevFormData => ({
                 ...prevFormData,
