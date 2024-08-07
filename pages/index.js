@@ -281,7 +281,7 @@ export default function Home() {
         <Card data={PORData} cardSize="cardMedium" largeBackground={true}/>
       </div>
       <Line />
-      <Form />
+      {/* <Form /> */}
       <LinkBar data={SocialLinks} style={"socials"}/>
     </div>
   );
